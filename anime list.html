@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Anime list | Otaku Paradise</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+<!-- Browser icon -->
+   <link rel="icon"  href="otaku1.png">
+<!-- end of Browser icon -->
+
+<!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- end of bootsrap -->
+
+<style>
+body {
+padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+font: 400 15px/1.8 Lato, sans-serif;
+color: #777;
+}
+.portfolio-item {
+margin-bottom: 25px;
+}
+.nav-tabs li a {
+color: #777;
+}  
+.navbar {
+font-family: Montserrat, sans-serif;
+margin-bottom: 0;
+background-color: #2d2d30;
+border: 0;
+font-size: 11px !important;
+letter-spacing: 4px;
+opacity: 0.9;
+}
+.navbar li a, .navbar .navbar-brand { 
+color: #d5d5d5 !important;
+}
+.navbar-nav li a:hover {
+color: #fff !important;
+}
+.navbar-nav li.active a {
+color: #fff !important;
+background-color: #29292c !important;
+}
+.navbar-default .navbar-toggle {
+border-color: transparent;
+}
+.open .dropdown-toggle {
+color: #fff;
+background-color: #555 !important;
+}
+.dropdown-menu li a {
+color: #000 !important;
+}
+.dropdown-menu li a:hover {
+background-color: #555 !important;
+}
+h3, h4 {
+margin: 10px 0 30px 0;
+letter-spacing: 10px;      
+font-size: 20px;
+color: #111;
+}
+.btn {
+padding: 10px 20px;
+background-color: #333;
+color: #f1f1f1;
+border-radius: 0;
+transition: .2s;
+}
+.btn:hover, .btn:focus {
+border: 1px solid #333;
+background-color: #fff;
+color: #000;
+}
+.modal-header, h4, .close {
+background-color: #333;
+color: #fff !important;
+text-align: center;
+font-size: 30px;
+}
+.modal-header, .modal-body {
+padding: 40px 50px;
+}
+</style>
+
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+<!-- header -->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="index.html"><img src="img/otaku.png" width="130px" height="130px"  /></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="anime list.html">Anime List</a></li>
+        <li><a href="#theCommunity">"the Gate"</a></li>
+        <li><a href="#readManga">Genre</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Support us
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Merchandise</a></li>
+            <li><a href="#">Manga</a></li>
+            <li><a href="#">Blueray</a></li> 
+            <li><a href="#">Donate</a></li> 
+          </ul>
+        </li>
+        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-left">
+        <li><a href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-user"></span>Sign Up</a></li>
+        <li><a href="#" data-toggle="modal" data-target="#myModal2"><span class="glyphicon glyphicon-login"></span>Log in</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- the end of header -->
+
+ <!--Sign up Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!--Sign up Modal-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <h4><span class="glyphicon glyphicon-user"></span>Sign Up</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+            <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+              <input type="text" class="form-control" id="usrname" placeholder="Enter username">
+              <label for="usrname"><span class="glyphicon glyphicon-envelope"></span> email</label>
+              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="pwd"><span class="glyphicon glyphicon-lock"></span> Password</label>
+               <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+            </div>
+            <div class="form-group">
+              <label for="pwd"><span class="glyphicon glyphicon-lock"></span> confirm Password</label>
+               <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+            </div>
+            <div class="well"> 
+              <div class="form-group">
+              <label>Date of Birth</label>
+              <input type="date" class="form-control" id="exampleInputDOB1" placeholder="Date of Birth">
+            </div>
+            </div>
+              <button type="submit" class="btn btn-block">Sign up</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+            <span class="glyphicon glyphicon-remove"></span> Cancel
+          </button>
+          <p>Need <a href="#">help?</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ <!-- end of modal -->
+
+ <!-- log in -->
+  <div class="modal fade" id="myModal2" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- log in content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <h4><span class="glyphicon glyphicon-login"></span>Log in</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span>  Username</label>
+              <input type="text" class="form-control" id="usrname" placeholder="Enter username">
+            </div>
+            <div class="form-group">
+              <label for="pwd"><span class="glyphicon glyphicon-lock"></span> password</label>
+             <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+             </div>
+              <button type="submit" class="btn btn-block">log in</button>
+              <div class="checkbox">
+    <label><input type="checkbox"> Remember me</label>
+             </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+            <span class="glyphicon glyphicon-remove"></span> Cancel
+          </button>
+          <p>Need <a href="#">help?</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ <!-- end of log in-->
+<br>
+
+<!-- Page Content -->
+<div class="container">
+<!-- Page Heading -->
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Anime List
+            <small>Find what you are looking for!</small>
+        </h1>
+    </div>
+</div>
+<!-- end of page heading-->
+
+<!-- Projects Row1 -->
+<div class="row">
+    <div class="col-md-3 portfolio-item">
+        <a href="#">
+            <img class="img-responsive" src="https://images2.alphacoders.com/169/16922.jpg" alt="akira">
+        </a>
+    </div>
+    <div class="col-md-3 portfolio-item">
+        <a href="#">
+            <img class="img-responsive" src="https://myanimelist.cdn-dena.com/images/anime/12/82901.jpg" alt="" height="250px">
+        </a>
+    </div>
+    <div class="col-md-3 portfolio-item">
+        <a href="#">
+            <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+        </a>
+    </div>
+    <div class="col-md-3 portfolio-item">
+        <a href="#">
+            <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+        </a>
+    </div>
+</div>
+<!-- end of row1 -->
+
+<!-- Projects Row2 -->
+<div class="row">
+    <div class="col-md-3 portfolio-item">
+        <a href="#">
+            <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+        </a>
+    </div>
+    <div class="col-md-3 portfolio-item">
+        <a href="#">
+            <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+        </a>
+    </div>
+    <div class="col-md-3 portfolio-item">
+        <a href="#">
+            <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+        </a>
+    </div>
+    <div class="col-md-3 portfolio-item">
+        <a href="#">
+            <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+        </a>
+    </div>
+</div>
+<!-- end of row2-->
+
+<!-- Projects Row3 -->
+<div class="row">
+    <div class="col-md-3 portfolio-item">
+        <a href="#">
+            <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+        </a>
+    </div>
+    <div class="col-md-3 portfolio-item">
+        <a href="#">
+            <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+        </a>
+    </div>
+    <div class="col-md-3 portfolio-item">
+        <a href="#">
+            <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+        </a>
+    </div>
+    <div class="col-md-3 portfolio-item">
+        <a href="#">
+            <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+        </a>
+    </div>
+</div>
+<!-- end of row3-->
+
+<!-- Projects Row4 -->
+<div class="row">
+    <div class="col-md-3 portfolio-item">
+        <a href="#">
+            <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+        </a>
+    </div>
+    <div class="col-md-3 portfolio-item">
+        <a href="#">
+            <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+        </a>
+    </div>
+    <div class="col-md-3 portfolio-item">
+        <a href="#">
+            <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+        </a>
+    </div>
+    <div class="col-md-3 portfolio-item">
+        <a href="#">
+            <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+        </a>
+    </div>
+</div>
+<!-- end of row4 -->
+
+<!-- Projects Row5 -->
+<div class="row">
+    <div class="col-md-3 portfolio-item">
+        <a href="#">
+            <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+        </a>
+    </div>
+    <div class="col-md-3 portfolio-item">
+        <a href="#">
+            <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+        </a>
+    </div>
+    <div class="col-md-3 portfolio-item">
+        <a href="#">
+            <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+        </a>
+    </div>
+    <div class="col-md-3 portfolio-item">
+        <a href="#">
+            <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+        </a>
+    </div>
+</div>
+<!-- end of row5-->
+
+<!-- Projects Row6 -->
+<div class="row">
+    <div class="col-md-3 portfolio-item">
+        <a href="#">
+            <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+        </a>
+    </div>
+    <div class="col-md-3 portfolio-item">
+        <a href="#">
+            <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+        </a>
+    </div>
+    <div class="col-md-3 portfolio-item">
+        <a href="#">
+            <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+        </a>
+    </div>
+    <div class="col-md-3 portfolio-item">
+        <a href="#">
+            <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+        </a>
+    </div>
+</div>
+<!-- end of row6-->
+<hr>
+<!-- Pagination -->
+<div class="row text-center">
+  <div class="col-lg-12">
+    <ul class="pagination">
+        <li><a href="#">&laquo;</a></li>
+        <li class="active"><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">&raquo;</a></li>
+    </ul>
+  </div>
+</div>
+<!-- end of pagination-->
+<hr>
+<!-- Footer -->
+<footer>
+<div class="row">
+    <div class="col-lg-12">
+        <p>Copyright &copy; Your Website 2014</p>
+    </div>
+</div>
+</footer>
+<!-- end of footer-->
+
+<script>
+$(document).ready(function(){
+// Initialize Tooltip
+$('[data-toggle="tooltip"]').tooltip(); 
+
+// Add smooth scrolling to all links in navbar + footer link
+$(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+// Make sure this.hash has a value before overriding default behavior
+if (this.hash !== "") {
+
+  // Prevent default anchor click behavior
+  event.preventDefault();
+
+  // Store hash
+  var hash = this.hash;
+
+  // Using jQuery's animate() method to add smooth page scroll
+  // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+  $('html, body').animate({
+    scrollTop: $(hash).offset().top
+  }, 900, function(){
+
+    // Add hash (#) to URL when done scrolling (default click behavior)
+    window.location.hash = hash;
+  });
+} // End if
+});
+})
+
+//Dropdown:
+$('ul.nav li.dropdown').hover(function() {
+  $(this).find('.dropdown-menu').stop(true, true).delay(10).fadeIn(500);
+}, function() {
+  $(this).find('.dropdown-menu').stop(true, true).delay(10).fadeOut(500);
+});
+// end of Dropdown.
+</script>
+</body>
+
+</html>
