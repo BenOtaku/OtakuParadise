@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Anime list | Otaku Paradise</title>
 
@@ -148,6 +147,7 @@ width: 200px;
 margin: 0;
 padding: 0;
 list-style: none;
+opacity: 0.9;
 }
 
 .sidebar-nav li {
@@ -277,36 +277,28 @@ margin-right: 0;
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
-
-<div class="container">
-  <div class="row">
-    <h2>Some text</h2>
-<hr/>
 <div id="wrapper">
 <!-- Sidebar -->
   <div id="sidebar-wrapper">
       <ul class="sidebar-nav" style="margin-left:0;">
+        <li>
+              <h2>Anime List</h2>
+<h6>Find what you are looking for!</h6>
+        </li>
           <li class="sidebar-brand">
-              
-              <a href="#menu-toggle"  id="menu-toggle" style="margin-top:20px;float:right;" > <i class="fa fa-bars " style="font-size:20px !Important;" aria-hidden="true" aria-hidden="true"></i> 
+             <a href="#menu-toggle"  id="menu-toggle" style="margin-top:20px;float:right;" > <i class="fa fa-bars " style="font-size:20px !Important;" aria-hidden="true" aria-hidden="true"></i> 
           </li>
       <li>
-          <a href="#"><i class="fa fa-sort-alpha-asc" aria-hidden="true"></i><span style="margin-left:10px;">Section</span>  </a>
+          <a href="#"><i class="fa fa-sort-alpha-asc" aria-hidden="true"></i><span style="margin-left:10px;">List</span></a>
       </li>
       <li>
-          <a href="#"> <i class="fa fa-play-circle-o " aria-hidden="true"> </i> <span style="margin-left:10px;"> Section</span> </a>
+          <a href="#"> <i class="fa fa-puzzle-piece" aria-hidden="true"> </i> <span style="margin-left:10px;">Genre</span></a>
       </li>
       <li>
-          <a href="#"> <i class="fa fa-puzzle-piece" aria-hidden="true"> </i> <span style="margin-left:10px;"> Section</span> </a>
+          <a href="#"> <i class="fa fa-play-circle-o " aria-hidden="true"> </i> <span style="margin-left:10px;">Popular</span></a>
       </li>
       <li>
-          <a href="#"> <i class="fa fa-font" aria-hidden="true"> </i> <span style="margin-left:10px;"> Section</span> </a>
-      </li>
-      <li>
-          <a href="#"><i class="fa fa-info-circle " aria-hidden="true"> </i> <span style="margin-left:10px;">Section </span> </a>
-      </li>
-      <li>
-          <a href="#"> <i class="fa fa-comment-o" aria-hidden="true"> </i> <span style="margin-left:10px;"> Section</span> </a>
+          <a href="#"> <i class="fa fa-font" aria-hidden="true"> </i> <span style="margin-left:10px;">Sugestion</span></a>
       </li>
       </ul>
   </div>
@@ -320,6 +312,7 @@ margin-right: 0;
       </a>
   </div>
 </div>
+<!-- end of side-bar -->
 
 <!-- header -->
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -445,16 +438,6 @@ margin-right: 0;
 
 <!-- Page Content -->
 <div class="container">
-<!-- Page Heading -->
-<div class="row">
-    <div class="col-lg-12">
-        <h1 class="page-header">Anime List
-            <small>Find what you are looking for!</small>
-        </h1>
-    </div>
-</div>
-<!-- end of page heading-->
-
 <!-- Projects Row1 -->
 <div class="row">
     <div class="col-md-3 portfolio-item">
@@ -464,7 +447,7 @@ margin-right: 0;
     </div>
     <div class="col-md-3 portfolio-item">
         <a href="#">
-            <img class="img-responsive" src="https://upload.wikimedia.org/wikipedia/en/thumb/1/1d/Cowboy-bebop-754433.jpg/220px-Cowboy-bebop-754433.jpg" alt="" height="250px">
+            <img class="img-responsive" src="https://upload.wikimedia.org/wikipedia/en/thumb/1/1d/Cowboy-bebop-754433.jpg/220px-Cowboy-bebop-754433.jpg" alt="">
         </a>
     </div>
     <div class="col-md-3 portfolio-item">
@@ -474,7 +457,7 @@ margin-right: 0;
     </div>
     <div class="col-md-3 portfolio-item">
         <a href="#">
-            <img class="img-responsive" src="http://hitmasala.com/wp-content/uploads/2016/05/Neon-Genesis-Evangelion.jpg" alt="">
+            <img class="img-responsive" src="http://hitmasala.com/wp-content/uploads/2016/05/Neon-Genesis-Evangelion.jpg" alt="" >
         </a>
     </div>
 </div>
@@ -677,3 +660,4 @@ $('ul.nav li.dropdown').hover(function() {
 </body>
 
 </html>
+
