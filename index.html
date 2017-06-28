@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <title>HomePage | Otaku Paradise</title>
+ <title>Home Page | Otaku Paradise</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
- <!-- Browser icon -->
-  <link rel="icon" href="otaku1.png">
- <!-- end of Browser icon -->
+  <!-- Browser icon -->
+   <link rel="icon"  href="otaku1.png">
+  <!-- end of Browser icon -->
 <!-- Bootstrap -->
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
- <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
- <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <!-- end of bootsrap -->
+
+<!-- Font-awesome-->
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+<!-- end of font-awesome-->
 
 <style>
 body {
@@ -132,18 +136,137 @@ color: #000 !important;
 .dropdown-menu li a:hover {
 background-color: #555 !important;
 }
-footer {
-background-color: #2d2d30;
-color: #f5f5f5;
-padding: 32px;
-}
 .form-control {
 border-radius: 0;
 }
 textarea {
 resize: none;
 }
-  </style>
+
+.full {
+    width: 100%;    
+}
+.gap {
+  height: 30px;
+  width: 100%;
+  clear: both;
+  display: block;
+}
+.footer {
+  background:#2d2d30;
+  height: auto;
+  padding-bottom: 30px;
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid #CCCCCC;
+  border-top: 1px solid #DDDDDD;
+}
+.footer p {
+  margin: 0;
+}
+.footer img {
+  max-width: 100%;
+}
+.footer h3 {
+  border-bottom: 1px solid #BAC1C8;
+  color: #54697E;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 27px;
+  padding: 40px 0 10px;
+  text-transform: uppercase;
+}
+.footer ul {
+  font-size: 13px;
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+  margin-top: 15px;
+  color: #7F8C8D;
+}
+.footer ul li a {
+  padding: 0 0 5px 0;
+  display: block;
+}
+.footer a {
+  color: #78828D
+}
+.supportLi h4 {
+  font-size: 20px;
+  font-weight: lighter;
+  line-height: normal;
+  margin-bottom: 0 !important;
+  padding-bottom: 0;
+}
+.newsletter-box input#appendedInputButton {
+  background: #FFFFFF;
+  display: inline-block;
+  float: left;
+  height: 30px;
+  clear: both;
+  width: 100%;
+}
+.newsletter-box .btn {
+  border: medium none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+  display: inline-block;
+  height: 40px;
+  padding: 0;
+  width: 100%;
+  color: #fff;
+}
+.newsletter-box {
+  overflow: hidden;
+}
+.bg-gray {
+  background-image: -moz-linear-gradient(center bottom, #BBBBBB 0%, #F0F0F0 100%);
+  box-shadow: 0 1px 0 #B4B3B3;
+}
+.social li {
+  background: none repeat scroll 0 0 #B5B5B5;
+  border: 2px solid #B5B5B5;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  float: left;
+  height: 36px;
+  line-height: 36px;
+  margin: 0 8px 0 0;
+  padding: 0;
+  text-align: center;
+  width: 36px;
+  transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  -webkit-transition: all 0.5s ease 0s;
+  -ms-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+}
+.social li:hover {
+  transform: scale(1.15) rotate(360deg);
+  -webkit-transform: scale(1.1) rotate(360deg);
+  -moz-transform: scale(1.1) rotate(360deg);
+  -ms-transform: scale(1.1) rotate(360deg);
+  -o-transform: scale(1.1) rotate(360deg);
+}
+.social li a {
+  color: #EDEFF1;
+}
+.social li:hover {
+  border: 2px solid #2c3e50;
+  background: #2c3e50;
+}
+.social li a i {
+  font-size: 16px;
+  margin: 0 0 0 5px;
+  color: #EDEFF1 !important;
+}
+</style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
 <!-- header -->
@@ -155,12 +278,13 @@ resize: none;
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="index.html"><img src="Otaku.png" width="130px" height="130px"  /></a>
+      <a class="navbar-brand" href="index.html"><img src="img/otaku.png" width="130px" height="130px"  /></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="anime list.html">Anime List</a></li>
-        <li><a href="#theGate">"the Gate"</a></li>
+        <li><a href="#theCommunity">the Gate</a></li>
+        <li><a href="#readManga">Genre</a></li>
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">Support us
           <span class="caret"></span></a>
@@ -197,7 +321,6 @@ resize: none;
       <li data-target="#myCarousel" data-slide-to="8"></li>
       <li data-target="#myCarousel" data-slide-to="9"></li>
       <li data-target="#myCarousel" data-slide-to="10"></li>
-      <li data-target="#myCarousel" data-slide-to="11"></li>
     </ol>
 
     <!-- Wrapper for slides -->
@@ -259,20 +382,13 @@ resize: none;
       
 
       <div class="item"> 
-        <img src="https://i.ytimg.com/vi/jx0cPVg9cmg/maxresdefault.jpg" alt="One Punch Man" width="1000" height="500">
+        <img src="https://images6.alphacoders.com/512/512323.jpg" alt="No game No life" width="1000" height="500">
       </div>
 
       <div class="item">
         <img src="https://images.alphacoders.com/224/thumb-1920-224763.jpg" alt="Steins gate" width="1000" height="500">
         <div class="carousel-caption">
           <h3>Steins;Gate</h3>
-        </div>
-      </div>
-     
-      <div class="item">
-        <img src="http://wallpapercave.com/wp/wc1701227.jpg" alt="One Piece" width="1000" height="500">
-        <div class="carousel-caption">
-          <h3>One Piece</h3>
         </div>
       </div>
     </div>
@@ -293,8 +409,7 @@ resize: none;
 <div class="container text-center">
   <h3><strong>Why</strong> Otaku Paradise?</h3>
   <p><em>We love anime!</em></p>
-  <p>Our main purpose is to create a community in which people interested in anime will be able to enjoy their favorite shows and freely express themeselves. The why of<i> Otaky Paradise</i> is to make the anime experience, an unique experience in which people enjoy their favorite shows and communicate with each other. We want to create a paradise… An Otaku Paradise.<br>
-<strong>so care to join us?</strong></p>
+  <p>Do you have an urge after watching/reading something that you deem special you want to share with a person or group? Do you want to create real bound with a diverse bunch of people or want to have silly and more serious conversation about anime? Do you want friends online as well as in the "real world". Oh boy! We have something for you, We believe that our passion is made to be share with one another just like in a community, that is why We have created a website for the anime lovers to the most casual watchers and new comers to the anime community even though There might be plenty available website  but none provide the experience that we do.<strong>so care to join us?</strong></p>
   <br>
   <div class="row">
     <div class="col-sm-4">
@@ -339,7 +454,7 @@ resize: none;
 <div class="bg-1">
   <div class="container">
     <h3 class="text-center"><stong>How</stong> do we do it?</h3>
-    <p>We do what we do by creating a website that provides a "comunity" of "Otaku" where you interact with one another and exchange passion on works that have inspire you(or vice-versa), have conversation about random topic or litteraly everything you want. We provide high quality anime. You can navigate through our social network With your personal profile, watch anime live with friends, meet new people, create bookmarks, create list of any sorts on your homepage, make live reactions with no restriction whatsoever,and much more. </p>
+    <p>We do what we do by creating a website that provides a "comunity" of "Otaku" where you interact with one another and exchange passion on works that have inspire you(or vice-versa), have conversation about random topic or litteraly everything you want. We also provide high quality anime and manga with accurate subtitles, you can create bookmarks, create list of any sorts on your homepage and much more. </p>
     </div>
   </div>
 
@@ -438,7 +553,7 @@ resize: none;
       <p>Fan? Drop a note.</p>
       <p><span class="glyphicon glyphicon-map-marker"></span>New-York, US</p>
       <p><span class="glyphicon glyphicon-phone"></span>Phone: (646) 796-0580</p>
-      <p><span class="glyphicon glyphicon-envelope"></span>Email: otakuParadise98@gmail.com</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>Email: camillebenoit98@yahoo.com</p>
     </div>
     <div class="col-md-8">
       <div class="row">
@@ -461,13 +576,63 @@ resize: none;
 </div>
 <!-- end of contact -->
 
-<!-- Footer -->
-<footer class="text-center">
-<h1>Otaku Paradise</h1>
-<h3>It is an unique experience!</h3>
-<p>Watch anime and...</p>
-<p>Be part of a community!</p>
- </footer>
+<!--footer-->
+<footer>
+    <div class="footer" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+                    <h3> Lorem Ipsum </h3>
+                    <ul>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+                    <h3> Lorem Ipsum </h3>
+                    <ul>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+                    <h3> Lorem Ipsum </h3>
+                    <ul>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+                    <h3> Lorem Ipsum </h3>
+                    <ul>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3  col-md-3 col-sm-6 col-xs-12 ">
+                    <h3> Lorem Ipsum </h3>
+                    <ul class="social">
+                        <li> <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i> </a> </li>
+                        <li> <a href="#"> <i class="fa fa-twitter">   </i> </a> </li>
+                        <li> <a href="#"> <i class="fa fa-google-plus">   </i> </a> </li>
+                        <li> <a href="#"> <i class="fa fa-pinterest">   </i> </a> </li>
+                        <li> <a href="#"> <i class="fa fa-youtube">   </i> </a> </li>
+                    </ul>
+                </div>
+            </div>
+            <!--/.row--> 
+        </div>
+        <!--/.container--> 
+    </div>
+    <!--/.footer-->
 <!-- end of footer -->
 
 <script>
@@ -477,12 +642,16 @@ $(document).ready(function(){
   
   // Add smooth scrolling to all links in navbar + footer link
   $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
     // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "") {
+
       // Prevent default anchor click behavior
       event.preventDefault();
+
       // Store hash
       var hash = this.hash;
+
       // Using jQuery's animate() method to add smooth page scroll
       // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate({
